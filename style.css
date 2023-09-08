@@ -52,6 +52,19 @@ body{
     padding: 18px 18px;
     text-decoration: none;
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 20px 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #5D5360;
+}
 
 #banner{
     background-color: #FFEADD;
@@ -231,5 +244,77 @@ h2{
 
     #about>h2{
         margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    .hamburger{
+        display: block;
+        padding: 8px;
+        float: right;
+        width: 100vw;
+        background-color: #FFEADD;
+        position: fixed;
+    }
+
+    #list{
+        position: fixed;
+        left: -100%;
+        top: 40px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #FFEADD;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    #list.active{
+        left: 0;
+    }
+
+    #empty-projects{
+        position: relative;
+        top: -45px;
+    }
+
+    #empty-about{
+        position: relative;
+        top: -45px;
+    }
+
+    h1{
+        font-size: x-large;
+    }
+
+    .heading{
+        font-size: large;
+        line-height: 1.8rem;
+        margin-bottom: 1.1rem;
+    }
+
+    #banner{
+        align-content: center;
+    }
+
+    #about h2{
+        font-size: larger;
+    }
+
+    .about > h3{
+        font-size: large;
+        margin-bottom: 0.5pc;
+    }
+
+    #projects > h2{
+        font-size: larger;
+    }
+
+    #projects h3{
+        font-size: large;
+    }
+
+    .contact-section h2{
+        font-size: larger;
     }
 }
